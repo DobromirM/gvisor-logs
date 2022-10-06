@@ -1,0 +1,99 @@
+I1006 13:43:02.105075    5821 main.go:216] ***************************
+I1006 13:43:02.105114    5821 main.go:217] Args: [runsc --root=/run/containerd/runsc/k8s.io --log=/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/log.json --log-format=json --debug=true --debug-log=/var/log/runsc/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/gvisor.%COMMAND%.log state 094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121]
+I1006 13:43:02.105140    5821 main.go:218] Version release-20220919.0
+I1006 13:43:02.105159    5821 main.go:219] GOOS: linux
+I1006 13:43:02.105174    5821 main.go:220] GOARCH: amd64
+I1006 13:43:02.105190    5821 main.go:221] PID: 5821
+I1006 13:43:02.105204    5821 main.go:222] UID: 0, GID: 0
+I1006 13:43:02.105216    5821 main.go:223] Configuration:
+I1006 13:43:02.105228    5821 main.go:224] 		RootDir: /run/containerd/runsc/k8s.io
+I1006 13:43:02.105241    5821 main.go:225] 		Platform: ptrace
+I1006 13:43:02.105257    5821 main.go:226] 		FileAccess: exclusive, overlay: false
+I1006 13:43:02.105273    5821 main.go:227] 		Network: sandbox, logging: false
+I1006 13:43:02.105287    5821 main.go:228] 		Strace: false, max size: 1024, syscalls: 
+I1006 13:43:02.105300    5821 main.go:229] 		LISAFS: true
+I1006 13:43:02.105312    5821 main.go:230] 		Debug: true
+I1006 13:43:02.105324    5821 main.go:231] 		Systemd: false
+I1006 13:43:02.105336    5821 main.go:232] ***************************
+D1006 13:43:02.105364    5821 state_file.go:57] Load container, rootDir: "/run/containerd/runsc/k8s.io", id: {SandboxID: ContainerID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121}, opts: {Exact:false SkipCheck:false RootContainer:false}
+D1006 13:43:02.108197    5821 state.go:65] Returning state for container &{ID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 Spec:0xc0000b3000 BundleDir:/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 CreatedAt:2022-10-06 13:43:01.895554893 +0000 UTC Owner: ConsoleSocket: Status:created GoferPid:5773 Sandbox:0xc00049c050 CompatCgroup:{Cgroup:<nil>} Saver:{RootDir:/run/containerd/runsc/k8s.io ID:{SandboxID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 ContainerID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121} once:{done:0 m:{state:0 sema:0}} flock:<nil>} goferIsChild:false}
+D1006 13:43:02.108857    5821 state.go:68] State: {Version:1.0.2-dev ID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 Status:created Pid:5795 Bundle:/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 Annotations:map[dev.gvisor.spec.mount.gvisorinternaldevshm.options:rw dev.gvisor.spec.mount.gvisorinternaldevshm.share:pod dev.gvisor.spec.mount.gvisorinternaldevshm.source:/run/containerd/io.containerd.grpc.v1.cri/sandboxes/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/shm dev.gvisor.spec.mount.gvisorinternaldevshm.type:tmpfs io.kubernetes.cri.container-type:sandbox io.kubernetes.cri.sandbox-cpu-period:100000 io.kubernetes.cri.sandbox-cpu-quota:1000 io.kubernetes.cri.sandbox-cpu-shares:2 io.kubernetes.cri.sandbox-id:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 io.kubernetes.cri.sandbox-log-directory:/var/log/pods/dmarinov_nginx-7d577bf9c6-n4m8d_3d6523c3-ac3f-4f51-bd36-ca6b432568d7 io.kubernetes.cri.sandbox-memory:1048576 io.kubernetes.cri.sandbox-name:nginx-7d577bf9c6-n4m8d io.kubernetes.cri.sandbox-namespace:dmarinov]}
+I1006 13:43:02.109576    5821 main.go:248] Exiting with status: 0
+I1006 13:43:02.238085    5850 main.go:216] ***************************
+I1006 13:43:02.238131    5850 main.go:217] Args: [runsc --root=/run/containerd/runsc/k8s.io --log=/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/log.json --log-format=json --debug=true --debug-log=/var/log/runsc/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/gvisor.%COMMAND%.log state 094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121]
+I1006 13:43:02.238162    5850 main.go:218] Version release-20220919.0
+I1006 13:43:02.238253    5850 main.go:219] GOOS: linux
+I1006 13:43:02.238266    5850 main.go:220] GOARCH: amd64
+I1006 13:43:02.238284    5850 main.go:221] PID: 5850
+I1006 13:43:02.238298    5850 main.go:222] UID: 0, GID: 0
+I1006 13:43:02.238310    5850 main.go:223] Configuration:
+I1006 13:43:02.238323    5850 main.go:224] 		RootDir: /run/containerd/runsc/k8s.io
+I1006 13:43:02.238337    5850 main.go:225] 		Platform: ptrace
+I1006 13:43:02.238350    5850 main.go:226] 		FileAccess: exclusive, overlay: false
+I1006 13:43:02.238365    5850 main.go:227] 		Network: sandbox, logging: false
+I1006 13:43:02.238379    5850 main.go:228] 		Strace: false, max size: 1024, syscalls: 
+I1006 13:43:02.238391    5850 main.go:229] 		LISAFS: true
+I1006 13:43:02.238404    5850 main.go:230] 		Debug: true
+I1006 13:43:02.238416    5850 main.go:231] 		Systemd: false
+I1006 13:43:02.238428    5850 main.go:232] ***************************
+D1006 13:43:02.238459    5850 state_file.go:57] Load container, rootDir: "/run/containerd/runsc/k8s.io", id: {SandboxID: ContainerID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121}, opts: {Exact:false SkipCheck:false RootContainer:false}
+D1006 13:43:02.247333    5850 container.go:582] Signal container, cid: 094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121, signal: signal 0 (0)
+D1006 13:43:02.247480    5850 sandbox.go:1017] Signal sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:02.247496    5850 sandbox.go:519] Connecting to sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:02.247603    5850 urpc.go:568] urpc: successfully marshalled 144 bytes.
+D1006 13:43:02.248235    5850 urpc.go:611] urpc: unmarshal success.
+D1006 13:43:02.248260    5850 state.go:65] Returning state for container &{ID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 Spec:0xc0000b5000 BundleDir:/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 CreatedAt:2022-10-06 13:43:01.895554893 +0000 UTC Owner: ConsoleSocket: Status:running GoferPid:5773 Sandbox:0xc0000900a0 CompatCgroup:{Cgroup:<nil>} Saver:{RootDir:/run/containerd/runsc/k8s.io ID:{SandboxID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 ContainerID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121} once:{done:0 m:{state:0 sema:0}} flock:<nil>} goferIsChild:false}
+D1006 13:43:02.248311    5850 state.go:68] State: {Version:1.0.2-dev ID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 Status:running Pid:5795 Bundle:/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 Annotations:map[dev.gvisor.spec.mount.gvisorinternaldevshm.options:rw dev.gvisor.spec.mount.gvisorinternaldevshm.share:pod dev.gvisor.spec.mount.gvisorinternaldevshm.source:/run/containerd/io.containerd.grpc.v1.cri/sandboxes/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/shm dev.gvisor.spec.mount.gvisorinternaldevshm.type:tmpfs io.kubernetes.cri.container-type:sandbox io.kubernetes.cri.sandbox-cpu-period:100000 io.kubernetes.cri.sandbox-cpu-quota:1000 io.kubernetes.cri.sandbox-cpu-shares:2 io.kubernetes.cri.sandbox-id:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 io.kubernetes.cri.sandbox-log-directory:/var/log/pods/dmarinov_nginx-7d577bf9c6-n4m8d_3d6523c3-ac3f-4f51-bd36-ca6b432568d7 io.kubernetes.cri.sandbox-memory:1048576 io.kubernetes.cri.sandbox-name:nginx-7d577bf9c6-n4m8d io.kubernetes.cri.sandbox-namespace:dmarinov]}
+I1006 13:43:02.248531    5850 main.go:248] Exiting with status: 0
+I1006 13:43:02.278320    5858 main.go:216] ***************************
+I1006 13:43:02.278367    5858 main.go:217] Args: [runsc --root=/run/containerd/runsc/k8s.io --log=/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/log.json --log-format=json --debug=true --debug-log=/var/log/runsc/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/gvisor.%COMMAND%.log state 094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121]
+I1006 13:43:02.278396    5858 main.go:218] Version release-20220919.0
+I1006 13:43:02.278408    5858 main.go:219] GOOS: linux
+I1006 13:43:02.278420    5858 main.go:220] GOARCH: amd64
+I1006 13:43:02.278433    5858 main.go:221] PID: 5858
+I1006 13:43:02.278447    5858 main.go:222] UID: 0, GID: 0
+I1006 13:43:02.278459    5858 main.go:223] Configuration:
+I1006 13:43:02.278471    5858 main.go:224] 		RootDir: /run/containerd/runsc/k8s.io
+I1006 13:43:02.278484    5858 main.go:225] 		Platform: ptrace
+I1006 13:43:02.278501    5858 main.go:226] 		FileAccess: exclusive, overlay: false
+I1006 13:43:02.278515    5858 main.go:227] 		Network: sandbox, logging: false
+I1006 13:43:02.278529    5858 main.go:228] 		Strace: false, max size: 1024, syscalls: 
+I1006 13:43:02.278541    5858 main.go:229] 		LISAFS: true
+I1006 13:43:02.278554    5858 main.go:230] 		Debug: true
+I1006 13:43:02.278566    5858 main.go:231] 		Systemd: false
+I1006 13:43:02.278578    5858 main.go:232] ***************************
+D1006 13:43:02.278605    5858 state_file.go:57] Load container, rootDir: "/run/containerd/runsc/k8s.io", id: {SandboxID: ContainerID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121}, opts: {Exact:false SkipCheck:false RootContainer:false}
+D1006 13:43:02.281007    5858 container.go:582] Signal container, cid: 094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121, signal: signal 0 (0)
+D1006 13:43:02.281059    5858 sandbox.go:1017] Signal sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:02.281075    5858 sandbox.go:519] Connecting to sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:02.281282    5858 urpc.go:568] urpc: successfully marshalled 144 bytes.
+D1006 13:43:02.281573    5858 urpc.go:611] urpc: unmarshal success.
+D1006 13:43:02.281596    5858 state.go:65] Returning state for container &{ID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 Spec:0xc0000b3000 BundleDir:/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 CreatedAt:2022-10-06 13:43:01.895554893 +0000 UTC Owner: ConsoleSocket: Status:running GoferPid:5773 Sandbox:0xc0004ac000 CompatCgroup:{Cgroup:<nil>} Saver:{RootDir:/run/containerd/runsc/k8s.io ID:{SandboxID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 ContainerID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121} once:{done:0 m:{state:0 sema:0}} flock:<nil>} goferIsChild:false}
+D1006 13:43:02.281670    5858 state.go:68] State: {Version:1.0.2-dev ID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 Status:running Pid:5795 Bundle:/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 Annotations:map[dev.gvisor.spec.mount.gvisorinternaldevshm.options:rw dev.gvisor.spec.mount.gvisorinternaldevshm.share:pod dev.gvisor.spec.mount.gvisorinternaldevshm.source:/run/containerd/io.containerd.grpc.v1.cri/sandboxes/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/shm dev.gvisor.spec.mount.gvisorinternaldevshm.type:tmpfs io.kubernetes.cri.container-type:sandbox io.kubernetes.cri.sandbox-cpu-period:100000 io.kubernetes.cri.sandbox-cpu-quota:1000 io.kubernetes.cri.sandbox-cpu-shares:2 io.kubernetes.cri.sandbox-id:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 io.kubernetes.cri.sandbox-log-directory:/var/log/pods/dmarinov_nginx-7d577bf9c6-n4m8d_3d6523c3-ac3f-4f51-bd36-ca6b432568d7 io.kubernetes.cri.sandbox-memory:1048576 io.kubernetes.cri.sandbox-name:nginx-7d577bf9c6-n4m8d io.kubernetes.cri.sandbox-namespace:dmarinov]}
+I1006 13:43:02.281895    5858 main.go:248] Exiting with status: 0
+I1006 13:43:06.434079    5911 main.go:216] ***************************
+I1006 13:43:06.434119    5911 main.go:217] Args: [runsc --root=/run/containerd/runsc/k8s.io --log=/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/log.json --log-format=json --debug=true --debug-log=/var/log/runsc/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/gvisor.%COMMAND%.log state 094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121]
+I1006 13:43:06.434149    5911 main.go:218] Version release-20220919.0
+I1006 13:43:06.434161    5911 main.go:219] GOOS: linux
+I1006 13:43:06.434173    5911 main.go:220] GOARCH: amd64
+I1006 13:43:06.434186    5911 main.go:221] PID: 5911
+I1006 13:43:06.434199    5911 main.go:222] UID: 0, GID: 0
+I1006 13:43:06.434211    5911 main.go:223] Configuration:
+I1006 13:43:06.434223    5911 main.go:224] 		RootDir: /run/containerd/runsc/k8s.io
+I1006 13:43:06.434236    5911 main.go:225] 		Platform: ptrace
+I1006 13:43:06.434248    5911 main.go:226] 		FileAccess: exclusive, overlay: false
+I1006 13:43:06.434264    5911 main.go:227] 		Network: sandbox, logging: false
+I1006 13:43:06.434283    5911 main.go:228] 		Strace: false, max size: 1024, syscalls: 
+I1006 13:43:06.434295    5911 main.go:229] 		LISAFS: true
+I1006 13:43:06.434307    5911 main.go:230] 		Debug: true
+I1006 13:43:06.434320    5911 main.go:231] 		Systemd: false
+I1006 13:43:06.434332    5911 main.go:232] ***************************
+D1006 13:43:06.434360    5911 state_file.go:57] Load container, rootDir: "/run/containerd/runsc/k8s.io", id: {SandboxID: ContainerID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121}, opts: {Exact:false SkipCheck:false RootContainer:false}
+D1006 13:43:06.436552    5911 container.go:582] Signal container, cid: 094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121, signal: signal 0 (0)
+D1006 13:43:06.436596    5911 sandbox.go:1017] Signal sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.436606    5911 sandbox.go:519] Connecting to sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.436708    5911 urpc.go:568] urpc: successfully marshalled 144 bytes.
+D1006 13:43:06.437079    5911 urpc.go:611] urpc: unmarshal success.
+D1006 13:43:06.437102    5911 state.go:65] Returning state for container &{ID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 Spec:0xc00003a080 BundleDir:/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 CreatedAt:2022-10-06 13:43:01.895554893 +0000 UTC Owner: ConsoleSocket: Status:running GoferPid:5773 Sandbox:0xc0004a6050 CompatCgroup:{Cgroup:<nil>} Saver:{RootDir:/run/containerd/runsc/k8s.io ID:{SandboxID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 ContainerID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121} once:{done:0 m:{state:0 sema:0}} flock:<nil>} goferIsChild:false}
+D1006 13:43:06.437163    5911 state.go:68] State: {Version:1.0.2-dev ID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 Status:running Pid:5795 Bundle:/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 Annotations:map[dev.gvisor.spec.mount.gvisorinternaldevshm.options:rw dev.gvisor.spec.mount.gvisorinternaldevshm.share:pod dev.gvisor.spec.mount.gvisorinternaldevshm.source:/run/containerd/io.containerd.grpc.v1.cri/sandboxes/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/shm dev.gvisor.spec.mount.gvisorinternaldevshm.type:tmpfs io.kubernetes.cri.container-type:sandbox io.kubernetes.cri.sandbox-cpu-period:100000 io.kubernetes.cri.sandbox-cpu-quota:1000 io.kubernetes.cri.sandbox-cpu-shares:2 io.kubernetes.cri.sandbox-id:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 io.kubernetes.cri.sandbox-log-directory:/var/log/pods/dmarinov_nginx-7d577bf9c6-n4m8d_3d6523c3-ac3f-4f51-bd36-ca6b432568d7 io.kubernetes.cri.sandbox-memory:1048576 io.kubernetes.cri.sandbox-name:nginx-7d577bf9c6-n4m8d io.kubernetes.cri.sandbox-namespace:dmarinov]}
+I1006 13:43:06.437890    5911 main.go:248] Exiting with status: 0

@@ -1,0 +1,647 @@
+I1006 13:43:01.951291       1 main.go:216] ***************************
+I1006 13:43:01.951337       1 main.go:217] Args: [runsc-gofer --root=/run/containerd/runsc/k8s.io --debug=true --log=/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/log.json --log-format=json --debug-log=/var/log/runsc/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/gvisor.%COMMAND%.log --log-fd=3 --debug-log-fd=4 gofer --bundle /run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 --spec-fd=5 --mounts-fd=6 --io-fds=7 --io-fds=8]
+I1006 13:43:01.951360       1 main.go:218] Version release-20220919.0
+I1006 13:43:01.951375       1 main.go:219] GOOS: linux
+I1006 13:43:01.951387       1 main.go:220] GOARCH: amd64
+I1006 13:43:01.951399       1 main.go:221] PID: 1
+I1006 13:43:01.951413       1 main.go:222] UID: 0, GID: 0
+I1006 13:43:01.951425       1 main.go:223] Configuration:
+I1006 13:43:01.951439       1 main.go:224] 		RootDir: /run/containerd/runsc/k8s.io
+I1006 13:43:01.951454       1 main.go:225] 		Platform: ptrace
+I1006 13:43:01.951469       1 main.go:226] 		FileAccess: exclusive, overlay: false
+I1006 13:43:01.951483       1 main.go:227] 		Network: sandbox, logging: false
+I1006 13:43:01.951497       1 main.go:228] 		Strace: false, max size: 1024, syscalls: 
+I1006 13:43:01.951510       1 main.go:229] 		LISAFS: true
+I1006 13:43:01.951522       1 main.go:230] 		Debug: true
+I1006 13:43:01.951534       1 main.go:231] 		Systemd: false
+I1006 13:43:01.951546       1 main.go:232] ***************************
+I1006 13:43:01.959458       1 gofer.go:520] Mounting src: "/var/lib/containerd/io.containerd.grpc.v1.cri/sandboxes/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/resolv.conf", dst: "/proc/root/etc/resolv.conf", flags: 0x5001
+I1006 13:43:01.959818       1 gofer.go:472] Create working directory "/" if needed
+I1006 13:43:01.959839       1 gofer.go:482] Remounting root as readonly: "/proc/root"
+I1006 13:43:01.960207       1 capability.go:66] Capabilities applied: { effective="chown, dac_override, dac_read_search, fowner, fsetid, sys_chroot" permitted="chown, dac_override, dac_read_search, fowner, fsetid, sys_chroot" inheritable="empty" bounding="chown, dac_override, dac_read_search, fowner, fsetid, sys_chroot" }
+I1006 13:43:01.960254       1 cmd.go:73] Execve "/proc/self/exe" again, bye!
+I1006 13:43:01.987210       1 main.go:216] ***************************
+I1006 13:43:01.987262       1 main.go:217] Args: [runsc-gofer --root=/run/containerd/runsc/k8s.io --debug=true --log=/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/log.json --log-format=json --debug-log=/var/log/runsc/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/gvisor.%COMMAND%.log --log-fd=3 --debug-log-fd=4 gofer --bundle /run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 --spec-fd=5 --mounts-fd=6 --io-fds=7 --io-fds=8 --apply-caps=false --setup-root=false --sync-userns-fd=-1]
+I1006 13:43:01.987308       1 main.go:218] Version release-20220919.0
+I1006 13:43:01.987329       1 main.go:219] GOOS: linux
+I1006 13:43:01.987352       1 main.go:220] GOARCH: amd64
+I1006 13:43:01.987374       1 main.go:221] PID: 1
+I1006 13:43:01.987399       1 main.go:222] UID: 0, GID: 0
+I1006 13:43:01.987421       1 main.go:223] Configuration:
+I1006 13:43:01.987442       1 main.go:224] 		RootDir: /run/containerd/runsc/k8s.io
+I1006 13:43:01.987464       1 main.go:225] 		Platform: ptrace
+I1006 13:43:01.987489       1 main.go:226] 		FileAccess: exclusive, overlay: false
+I1006 13:43:01.987512       1 main.go:227] 		Network: sandbox, logging: false
+I1006 13:43:01.987541       1 main.go:228] 		Strace: false, max size: 1024, syscalls: 
+I1006 13:43:01.987563       1 main.go:229] 		LISAFS: true
+I1006 13:43:01.987589       1 main.go:230] 		Debug: true
+I1006 13:43:01.987611       1 main.go:231] 		Systemd: false
+I1006 13:43:01.987631       1 main.go:232] ***************************
+D1006 13:43:02.007633       1 specutils.go:75] Spec:
+{
+  "ociVersion": "1.0.2-dev",
+  "process": {
+    "user": {
+      "uid": 0,
+      "gid": 0
+    },
+    "args": [
+      "/pause"
+    ],
+    "env": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    ],
+    "cwd": "/",
+    "noNewPrivileges": true,
+    "oomScoreAdj": -998
+  },
+  "root": {
+    "path": "/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/rootfs",
+    "readonly": true
+  },
+  "hostname": "nginx-7d577bf9c6-n4m8d",
+  "mounts": [
+    {
+      "destination": "/proc",
+      "type": "proc",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/proc",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev"
+      ]
+    },
+    {
+      "destination": "/dev",
+      "type": "tmpfs",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/tmpfs",
+      "options": [
+        "nosuid",
+        "strictatime",
+        "mode=755",
+        "size=65536k"
+      ]
+    },
+    {
+      "destination": "/dev/pts",
+      "type": "devpts",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/devpts",
+      "options": [
+        "nosuid",
+        "noexec",
+        "newinstance",
+        "ptmxmode=0666",
+        "mode=0620",
+        "gid=5"
+      ]
+    },
+    {
+      "destination": "/dev/mqueue",
+      "type": "mqueue",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/mqueue",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev"
+      ]
+    },
+    {
+      "destination": "/sys",
+      "type": "sysfs",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/sysfs",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev",
+        "ro"
+      ]
+    },
+    {
+      "destination": "/dev/shm",
+      "type": "tmpfs",
+      "source": "/run/containerd/io.containerd.grpc.v1.cri/sandboxes/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/shm",
+      "options": [
+        "ro"
+      ]
+    },
+    {
+      "destination": "/etc/resolv.conf",
+      "type": "bind",
+      "source": "/var/lib/containerd/io.containerd.grpc.v1.cri/sandboxes/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/resolv.conf",
+      "options": [
+        "rbind",
+        "ro"
+      ]
+    }
+  ],
+  "annotations": {
+    "dev.gvisor.spec.mount.gvisorinternaldevshm.options": "rw",
+    "dev.gvisor.spec.mount.gvisorinternaldevshm.share": "pod",
+    "dev.gvisor.spec.mount.gvisorinternaldevshm.source": "/run/containerd/io.containerd.grpc.v1.cri/sandboxes/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/shm",
+    "dev.gvisor.spec.mount.gvisorinternaldevshm.type": "tmpfs",
+    "io.kubernetes.cri.container-type": "sandbox",
+    "io.kubernetes.cri.sandbox-cpu-period": "100000",
+    "io.kubernetes.cri.sandbox-cpu-quota": "1000",
+    "io.kubernetes.cri.sandbox-cpu-shares": "2",
+    "io.kubernetes.cri.sandbox-id": "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121",
+    "io.kubernetes.cri.sandbox-log-directory": "/var/log/pods/dmarinov_nginx-7d577bf9c6-n4m8d_3d6523c3-ac3f-4f51-bd36-ca6b432568d7",
+    "io.kubernetes.cri.sandbox-memory": "1048576",
+    "io.kubernetes.cri.sandbox-name": "nginx-7d577bf9c6-n4m8d",
+    "io.kubernetes.cri.sandbox-namespace": "dmarinov"
+  },
+  "linux": {
+    "resources": {
+      "cpu": {
+        "shares": 2
+      }
+    },
+    "cgroupsPath": "kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121",
+    "namespaces": [
+      {
+        "type": "pid"
+      },
+      {
+        "type": "ipc"
+      },
+      {
+        "type": "uts"
+      },
+      {
+        "type": "mount"
+      },
+      {
+        "type": "network",
+        "path": "/var/run/netns/cni-4fd53980-7cee-7a76-fe1c-84d145146945"
+      }
+    ]
+  }
+}
+I1006 13:43:02.008042       1 gofer.go:226] Process chroot'd to "/root"
+I1006 13:43:02.008065       1 seccomp.go:60] Installing seccomp filters for 58 syscalls (action=kill process)
+D1006 13:43:02.008168       1 seccomp.go:174] syscall filter read: [] => 0x616c6c6f77
+D1006 13:43:02.008186       1 seccomp.go:174] syscall filter write: [] => 0x616c6c6f77
+D1006 13:43:02.008195       1 seccomp.go:174] syscall filter close: [] => 0x616c6c6f77
+D1006 13:43:02.008209       1 seccomp.go:174] syscall filter fstat: [] => 0x616c6c6f77
+D1006 13:43:02.008218       1 seccomp.go:174] syscall filter lseek: [] => 0x616c6c6f77
+D1006 13:43:02.008229       1 seccomp.go:174] syscall filter mmap: [( * * & 0x4 == 0x4 )] => 0x6b696c6c2070726f63657373
+D1006 13:43:02.008266       1 seccomp.go:174] syscall filter mmap: [( * * * == 0x1 ) ( * * * == 0x22 ) ( * * * == 0x32 )] => 0x616c6c6f77
+D1006 13:43:02.008299       1 seccomp.go:174] syscall filter mprotect: [( * * & 0x4 == 0x4 )] => 0x6b696c6c2070726f63657373
+D1006 13:43:02.008314       1 seccomp.go:174] syscall filter mprotect: [] => 0x616c6c6f77
+D1006 13:43:02.008323       1 seccomp.go:174] syscall filter munmap: [] => 0x616c6c6f77
+D1006 13:43:02.008332       1 seccomp.go:174] syscall filter rt_sigaction: [] => 0x616c6c6f77
+D1006 13:43:02.008344       1 seccomp.go:174] syscall filter rt_sigprocmask: [] => 0x616c6c6f77
+D1006 13:43:02.008352       1 seccomp.go:174] syscall filter rt_sigreturn: [] => 0x616c6c6f77
+D1006 13:43:02.008395       1 seccomp.go:174] syscall filter pread64: [] => 0x616c6c6f77
+D1006 13:43:02.008404       1 seccomp.go:174] syscall filter pwrite64: [] => 0x616c6c6f77
+D1006 13:43:02.008415       1 seccomp.go:174] syscall filter sched_yield: [] => 0x616c6c6f77
+D1006 13:43:02.008427       1 seccomp.go:174] syscall filter madvise: [] => 0x616c6c6f77
+D1006 13:43:02.008435       1 seccomp.go:174] syscall filter dup: [] => 0x616c6c6f77
+D1006 13:43:02.008448       1 seccomp.go:174] syscall filter nanosleep: [] => 0x616c6c6f77
+D1006 13:43:02.008457       1 seccomp.go:174] syscall filter getpid: [] => 0x616c6c6f77
+D1006 13:43:02.008466       1 seccomp.go:174] syscall filter accept: [] => 0x616c6c6f77
+D1006 13:43:02.008479       1 seccomp.go:174] syscall filter sendmsg: [( * * == 0x0 ) ( * * == 0x4040 )] => 0x616c6c6f77
+D1006 13:43:02.008501       1 seccomp.go:174] syscall filter recvmsg: [( * * == 0x60 ) ( * * == 0x62 )] => 0x616c6c6f77
+D1006 13:43:02.008518       1 seccomp.go:174] syscall filter shutdown: [( * == 0x2 )] => 0x616c6c6f77
+D1006 13:43:02.008529       1 seccomp.go:174] syscall filter socketpair: [( == 0x1 == 0x80005 == 0x0 )] => 0x616c6c6f77
+D1006 13:43:02.008544       1 seccomp.go:174] syscall filter clone: [( == 0xd0f00 * == 0x0 == 0x0 * )] => 0x616c6c6f77
+D1006 13:43:02.008561       1 seccomp.go:174] syscall filter exit: [] => 0x616c6c6f77
+D1006 13:43:02.008573       1 seccomp.go:174] syscall filter fcntl: [( * == 0x3 ) ( * == 0x4 ) ( * == 0x1 ) ( * == 0x409 )] => 0x616c6c6f77
+D1006 13:43:02.008594       1 seccomp.go:174] syscall filter fsync: [] => 0x616c6c6f77
+D1006 13:43:02.008602       1 seccomp.go:174] syscall filter ftruncate: [] => 0x616c6c6f77
+D1006 13:43:02.008614       1 seccomp.go:174] syscall filter fchmod: [] => 0x616c6c6f77
+D1006 13:43:02.008622       1 seccomp.go:174] syscall filter gettimeofday: [] => 0x616c6c6f77
+D1006 13:43:02.008630       1 seccomp.go:174] syscall filter sigaltstack: [] => 0x616c6c6f77
+D1006 13:43:02.008642       1 seccomp.go:174] syscall filter fstatfs: [] => 0x616c6c6f77
+D1006 13:43:02.008655       1 seccomp.go:174] syscall filter gettid: [] => 0x616c6c6f77
+D1006 13:43:02.008666       1 seccomp.go:174] syscall filter futex: [( * == 0x80 * * == 0x0 ) ( * == 0x81 * * == 0x0 ) ( * == 0x0 * * ) ( * == 0x1 * * )] => 0x616c6c6f77
+D1006 13:43:02.008713       1 seccomp.go:174] syscall filter getdents64: [] => 0x616c6c6f77
+D1006 13:43:02.008722       1 seccomp.go:174] syscall filter restart_syscall: [] => 0x616c6c6f77
+D1006 13:43:02.008740       1 seccomp.go:174] syscall filter clock_gettime: [] => 0x616c6c6f77
+D1006 13:43:02.008749       1 seccomp.go:174] syscall filter exit_group: [] => 0x616c6c6f77
+D1006 13:43:02.008758       1 seccomp.go:174] syscall filter epoll_ctl: [] => 0x616c6c6f77
+D1006 13:43:02.008770       1 seccomp.go:174] syscall filter tgkill: [( == 0x1 )] => 0x616c6c6f77
+D1006 13:43:02.008781       1 seccomp.go:174] syscall filter openat: [] => 0x616c6c6f77
+D1006 13:43:02.008793       1 seccomp.go:174] syscall filter mkdirat: [] => 0x616c6c6f77
+D1006 13:43:02.008803       1 seccomp.go:174] syscall filter mknodat: [] => 0x616c6c6f77
+D1006 13:43:02.008815       1 seccomp.go:174] syscall filter fchownat: [] => 0x616c6c6f77
+D1006 13:43:02.008823       1 seccomp.go:174] syscall filter newfstatat: [] => 0x616c6c6f77
+D1006 13:43:02.008832       1 seccomp.go:174] syscall filter unlinkat: [] => 0x616c6c6f77
+D1006 13:43:02.008844       1 seccomp.go:174] syscall filter renameat: [] => 0x616c6c6f77
+D1006 13:43:02.008853       1 seccomp.go:174] syscall filter linkat: [] => 0x616c6c6f77
+D1006 13:43:02.008865       1 seccomp.go:174] syscall filter symlinkat: [] => 0x616c6c6f77
+D1006 13:43:02.008875       1 seccomp.go:174] syscall filter readlinkat: [] => 0x616c6c6f77
+D1006 13:43:02.008883       1 seccomp.go:174] syscall filter ppoll: [] => 0x616c6c6f77
+D1006 13:43:02.008895       1 seccomp.go:174] syscall filter utimensat: [] => 0x616c6c6f77
+D1006 13:43:02.008909       1 seccomp.go:174] syscall filter epoll_pwait: [( * * * * == 0x0 )] => 0x616c6c6f77
+D1006 13:43:02.008926       1 seccomp.go:174] syscall filter fallocate: [( * == 0x0 )] => 0x616c6c6f77
+D1006 13:43:02.008940       1 seccomp.go:174] syscall filter eventfd2: [( == 0x0 == 0x0 )] => 0x616c6c6f77
+D1006 13:43:02.008952       1 seccomp.go:174] syscall filter getcpu: [( * == 0x0 == 0x0 )] => 0x616c6c6f77
+D1006 13:43:02.008967       1 seccomp.go:174] syscall filter getrandom: [] => 0x616c6c6f77
+D1006 13:43:02.008976       1 seccomp.go:174] syscall filter memfd_create: [] => 0x616c6c6f77
+D1006 13:43:02.013171       1 seccomp.go:77] Seccomp program dump:
+0: A <- P[4:4]
+1: pc += (A == 3221225534) ? 1 [3] : 0 [2]
+2: ret 2147483648
+3: A <- P[0:4]
+4: pc += (A == 96) ? 3 [8] : 0 [5]
+5: pc += (A > 96) ? 0 [6] : 1 [7]
+6: pc += 219 [226]
+7: pc += 1 [9]
+8: ret 2147418112
+9: pc += (A == 28) ? 3 [13] : 0 [10]
+10: pc += (A > 28) ? 0 [11] : 1 [12]
+11: pc += 87 [99]
+12: pc += 1 [14]
+13: ret 2147418112
+14: pc += (A == 11) ? 3 [18] : 0 [15]
+15: pc += (A > 11) ? 0 [16] : 1 [17]
+16: pc += 58 [75]
+17: pc += 1 [19]
+18: ret 2147418112
+19: pc += (A == 5) ? 3 [23] : 0 [20]
+20: pc += (A > 5) ? 0 [21] : 1 [22]
+21: pc += 13 [35]
+22: pc += 1 [24]
+23: ret 2147418112
+24: pc += (A == 1) ? 3 [28] : 0 [25]
+25: pc += (A > 1) ? 0 [26] : 1 [27]
+26: pc += 5 [32]
+27: pc += 1 [29]
+28: ret 2147418112
+29: pc += (A == 0) ? 1 [31] : 0 [30]
+30: pc += 370 [401]
+31: ret 2147418112
+32: pc += (A == 3) ? 1 [34] : 0 [33]
+33: pc += 367 [401]
+34: ret 2147418112
+35: pc += (A == 9) ? 3 [39] : 0 [36]
+36: pc += (A > 9) ? 0 [37] : 1 [38]
+37: pc += 27 [65]
+38: pc += 23 [62]
+39: A <- P[32:4]
+40: A <- A & 4
+41: pc += (A == 4) ? 0 [42] : 4 [46]
+42: A <- P[36:4]
+43: A <- A & 0
+44: pc += (A == 0) ? 0 [45] : 1 [46]
+45: ret 2147483648
+46: A <- P[40:4]
+47: pc += (A == 1) ? 0 [48] : 3 [51]
+48: A <- P[44:4]
+49: pc += (A == 0) ? 0 [50] : 1 [51]
+50: ret 2147418112
+51: A <- P[40:4]
+52: pc += (A == 34) ? 0 [53] : 3 [56]
+53: A <- P[44:4]
+54: pc += (A == 0) ? 0 [55] : 1 [56]
+55: ret 2147418112
+56: A <- P[40:4]
+57: pc += (A == 50) ? 0 [58] : 3 [61]
+58: A <- P[44:4]
+59: pc += (A == 0) ? 0 [60] : 1 [61]
+60: ret 2147418112
+61: pc += 339 [401]
+62: pc += (A == 8) ? 1 [64] : 0 [63]
+63: pc += 337 [401]
+64: ret 2147418112
+65: pc += (A == 10) ? 1 [67] : 0 [66]
+66: pc += 334 [401]
+67: A <- P[32:4]
+68: A <- A & 4
+69: pc += (A == 4) ? 0 [70] : 4 [74]
+70: A <- P[36:4]
+71: A <- A & 0
+72: pc += (A == 0) ? 0 [73] : 1 [74]
+73: ret 2147483648
+74: ret 2147418112
+75: pc += (A == 17) ? 3 [79] : 0 [76]
+76: pc += (A > 17) ? 0 [77] : 1 [78]
+77: pc += 13 [91]
+78: pc += 1 [80]
+79: ret 2147418112
+80: pc += (A == 14) ? 3 [84] : 0 [81]
+81: pc += (A > 14) ? 0 [82] : 1 [83]
+82: pc += 5 [88]
+83: pc += 1 [85]
+84: ret 2147418112
+85: pc += (A == 13) ? 1 [87] : 0 [86]
+86: pc += 314 [401]
+87: ret 2147418112
+88: pc += (A == 15) ? 1 [90] : 0 [89]
+89: pc += 311 [401]
+90: ret 2147418112
+91: pc += (A == 24) ? 3 [95] : 0 [92]
+92: pc += (A > 24) ? 0 [93] : 1 [94]
+93: pc += 307 [401]
+94: pc += 1 [96]
+95: ret 2147418112
+96: pc += (A == 18) ? 1 [98] : 0 [97]
+97: pc += 303 [401]
+98: ret 2147418112
+99: pc += (A == 53) ? 3 [103] : 0 [100]
+100: pc += (A > 53) ? 0 [101] : 1 [102]
+101: pc += 67 [169]
+102: pc += 14 [117]
+103: A <- P[16:4]
+104: pc += (A == 1) ? 0 [105] : 11 [116]
+105: A <- P[20:4]
+106: pc += (A == 0) ? 0 [107] : 9 [116]
+107: A <- P[24:4]
+108: pc += (A == 524293) ? 0 [109] : 7 [116]
+109: A <- P[28:4]
+110: pc += (A == 0) ? 0 [111] : 5 [116]
+111: A <- P[32:4]
+112: pc += (A == 0) ? 0 [113] : 3 [116]
+113: A <- P[36:4]
+114: pc += (A == 0) ? 0 [115] : 1 [116]
+115: ret 2147418112
+116: pc += 284 [401]
+117: pc += (A == 43) ? 3 [121] : 0 [118]
+118: pc += (A > 43) ? 0 [119] : 1 [120]
+119: pc += 13 [133]
+120: pc += 1 [122]
+121: ret 2147418112
+122: pc += (A == 35) ? 3 [126] : 0 [123]
+123: pc += (A > 35) ? 0 [124] : 1 [125]
+124: pc += 5 [130]
+125: pc += 1 [127]
+126: ret 2147418112
+127: pc += (A == 32) ? 1 [129] : 0 [128]
+128: pc += 272 [401]
+129: ret 2147418112
+130: pc += (A == 39) ? 1 [132] : 0 [131]
+131: pc += 269 [401]
+132: ret 2147418112
+133: pc += (A == 47) ? 3 [137] : 0 [134]
+134: pc += (A > 47) ? 0 [135] : 1 [136]
+135: pc += 25 [161]
+136: pc += 11 [148]
+137: A <- P[32:4]
+138: pc += (A == 96) ? 0 [139] : 3 [142]
+139: A <- P[36:4]
+140: pc += (A == 0) ? 0 [141] : 1 [142]
+141: ret 2147418112
+142: A <- P[32:4]
+143: pc += (A == 98) ? 0 [144] : 3 [147]
+144: A <- P[36:4]
+145: pc += (A == 0) ? 0 [146] : 1 [147]
+146: ret 2147418112
+147: pc += 253 [401]
+148: pc += (A == 46) ? 1 [150] : 0 [149]
+149: pc += 251 [401]
+150: A <- P[32:4]
+151: pc += (A == 0) ? 0 [152] : 3 [155]
+152: A <- P[36:4]
+153: pc += (A == 0) ? 0 [154] : 1 [155]
+154: ret 2147418112
+155: A <- P[32:4]
+156: pc += (A == 16448) ? 0 [157] : 3 [160]
+157: A <- P[36:4]
+158: pc += (A == 0) ? 0 [159] : 1 [160]
+159: ret 2147418112
+160: pc += 240 [401]
+161: pc += (A == 48) ? 1 [163] : 0 [162]
+162: pc += 238 [401]
+163: A <- P[24:4]
+164: pc += (A == 2) ? 0 [165] : 3 [168]
+165: A <- P[28:4]
+166: pc += (A == 0) ? 0 [167] : 1 [168]
+167: ret 2147418112
+168: pc += 232 [401]
+169: pc += (A == 74) ? 3 [173] : 0 [170]
+170: pc += (A > 74) ? 0 [171] : 1 [172]
+171: pc += 46 [218]
+172: pc += 1 [174]
+173: ret 2147418112
+174: pc += (A == 60) ? 3 [178] : 0 [175]
+175: pc += (A > 60) ? 0 [176] : 1 [177]
+176: pc += 18 [195]
+177: pc += 1 [179]
+178: ret 2147418112
+179: pc += (A == 56) ? 1 [181] : 0 [180]
+180: pc += 220 [401]
+181: A <- P[16:4]
+182: pc += (A == 855808) ? 0 [183] : 11 [194]
+183: A <- P[20:4]
+184: pc += (A == 0) ? 0 [185] : 9 [194]
+185: A <- P[32:4]
+186: pc += (A == 0) ? 0 [187] : 7 [194]
+187: A <- P[36:4]
+188: pc += (A == 0) ? 0 [189] : 5 [194]
+189: A <- P[40:4]
+190: pc += (A == 0) ? 0 [191] : 3 [194]
+191: A <- P[44:4]
+192: pc += (A == 0) ? 0 [193] : 1 [194]
+193: ret 2147418112
+194: pc += 206 [401]
+195: pc += (A == 72) ? 1 [197] : 0 [196]
+196: pc += 204 [401]
+197: A <- P[24:4]
+198: pc += (A == 3) ? 0 [199] : 3 [202]
+199: A <- P[28:4]
+200: pc += (A == 0) ? 0 [201] : 1 [202]
+201: ret 2147418112
+202: A <- P[24:4]
+203: pc += (A == 4) ? 0 [204] : 3 [207]
+204: A <- P[28:4]
+205: pc += (A == 0) ? 0 [206] : 1 [207]
+206: ret 2147418112
+207: A <- P[24:4]
+208: pc += (A == 1) ? 0 [209] : 3 [212]
+209: A <- P[28:4]
+210: pc += (A == 0) ? 0 [211] : 1 [212]
+211: ret 2147418112
+212: A <- P[24:4]
+213: pc += (A == 1033) ? 0 [214] : 3 [217]
+214: A <- P[28:4]
+215: pc += (A == 0) ? 0 [216] : 1 [217]
+216: ret 2147418112
+217: pc += 183 [401]
+218: pc += (A == 91) ? 3 [222] : 0 [219]
+219: pc += (A > 91) ? 0 [220] : 1 [221]
+220: pc += 180 [401]
+221: pc += 1 [223]
+222: ret 2147418112
+223: pc += (A == 77) ? 1 [225] : 0 [224]
+224: pc += 176 [401]
+225: ret 2147418112
+226: pc += (A == 262) ? 3 [230] : 0 [227]
+227: pc += (A > 262) ? 0 [228] : 1 [229]
+228: pc += 91 [320]
+229: pc += 1 [231]
+230: ret 2147418112
+231: pc += (A == 231) ? 3 [235] : 0 [232]
+232: pc += (A > 231) ? 0 [233] : 1 [234]
+233: pc += 57 [291]
+234: pc += 1 [236]
+235: ret 2147418112
+236: pc += (A == 202) ? 3 [240] : 0 [237]
+237: pc += (A > 202) ? 0 [238] : 1 [239]
+238: pc += 41 [280]
+239: pc += 29 [269]
+240: A <- P[24:4]
+241: pc += (A == 128) ? 0 [242] : 7 [249]
+242: A <- P[28:4]
+243: pc += (A == 0) ? 0 [244] : 5 [249]
+244: A <- P[48:4]
+245: pc += (A == 0) ? 0 [246] : 3 [249]
+246: A <- P[52:4]
+247: pc += (A == 0) ? 0 [248] : 1 [249]
+248: ret 2147418112
+249: A <- P[24:4]
+250: pc += (A == 129) ? 0 [251] : 7 [258]
+251: A <- P[28:4]
+252: pc += (A == 0) ? 0 [253] : 5 [258]
+253: A <- P[48:4]
+254: pc += (A == 0) ? 0 [255] : 3 [258]
+255: A <- P[52:4]
+256: pc += (A == 0) ? 0 [257] : 1 [258]
+257: ret 2147418112
+258: A <- P[24:4]
+259: pc += (A == 0) ? 0 [260] : 3 [263]
+260: A <- P[28:4]
+261: pc += (A == 0) ? 0 [262] : 1 [263]
+262: ret 2147418112
+263: A <- P[24:4]
+264: pc += (A == 1) ? 0 [265] : 3 [268]
+265: A <- P[28:4]
+266: pc += (A == 0) ? 0 [267] : 1 [268]
+267: ret 2147418112
+268: pc += 132 [401]
+269: pc += (A == 138) ? 3 [273] : 0 [270]
+270: pc += (A > 138) ? 0 [271] : 1 [272]
+271: pc += 5 [277]
+272: pc += 1 [274]
+273: ret 2147418112
+274: pc += (A == 131) ? 1 [276] : 0 [275]
+275: pc += 125 [401]
+276: ret 2147418112
+277: pc += (A == 186) ? 1 [279] : 0 [278]
+278: pc += 122 [401]
+279: ret 2147418112
+280: pc += (A == 219) ? 3 [284] : 0 [281]
+281: pc += (A > 219) ? 0 [282] : 1 [283]
+282: pc += 5 [288]
+283: pc += 1 [285]
+284: ret 2147418112
+285: pc += (A == 217) ? 1 [287] : 0 [286]
+286: pc += 114 [401]
+287: ret 2147418112
+288: pc += (A == 228) ? 1 [290] : 0 [289]
+289: pc += 111 [401]
+290: ret 2147418112
+291: pc += (A == 258) ? 3 [295] : 0 [292]
+292: pc += (A > 258) ? 0 [293] : 1 [294]
+293: pc += 18 [312]
+294: pc += 1 [296]
+295: ret 2147418112
+296: pc += (A == 234) ? 3 [300] : 0 [297]
+297: pc += (A > 234) ? 0 [298] : 1 [299]
+298: pc += 10 [309]
+299: pc += 6 [306]
+300: A <- P[16:4]
+301: pc += (A == 1) ? 0 [302] : 3 [305]
+302: A <- P[20:4]
+303: pc += (A == 0) ? 0 [304] : 1 [305]
+304: ret 2147418112
+305: pc += 95 [401]
+306: pc += (A == 233) ? 1 [308] : 0 [307]
+307: pc += 93 [401]
+308: ret 2147418112
+309: pc += (A == 257) ? 1 [311] : 0 [310]
+310: pc += 90 [401]
+311: ret 2147418112
+312: pc += (A == 260) ? 3 [316] : 0 [313]
+313: pc += (A > 260) ? 0 [314] : 1 [315]
+314: pc += 86 [401]
+315: pc += 1 [317]
+316: ret 2147418112
+317: pc += (A == 259) ? 1 [319] : 0 [318]
+318: pc += 82 [401]
+319: ret 2147418112
+320: pc += (A == 280) ? 3 [324] : 0 [321]
+321: pc += (A > 280) ? 0 [322] : 1 [323]
+322: pc += 26 [349]
+323: pc += 1 [325]
+324: ret 2147418112
+325: pc += (A == 266) ? 3 [329] : 0 [326]
+326: pc += (A > 266) ? 0 [327] : 1 [328]
+327: pc += 13 [341]
+328: pc += 1 [330]
+329: ret 2147418112
+330: pc += (A == 264) ? 3 [334] : 0 [331]
+331: pc += (A > 264) ? 0 [332] : 1 [333]
+332: pc += 5 [338]
+333: pc += 1 [335]
+334: ret 2147418112
+335: pc += (A == 263) ? 1 [337] : 0 [336]
+336: pc += 64 [401]
+337: ret 2147418112
+338: pc += (A == 265) ? 1 [340] : 0 [339]
+339: pc += 61 [401]
+340: ret 2147418112
+341: pc += (A == 271) ? 3 [345] : 0 [342]
+342: pc += (A > 271) ? 0 [343] : 1 [344]
+343: pc += 57 [401]
+344: pc += 1 [346]
+345: ret 2147418112
+346: pc += (A == 267) ? 1 [348] : 0 [347]
+347: pc += 53 [401]
+348: ret 2147418112
+349: pc += (A == 309) ? 3 [353] : 0 [350]
+350: pc += (A > 309) ? 0 [351] : 1 [352]
+351: pc += 41 [393]
+352: pc += 10 [363]
+353: A <- P[24:4]
+354: pc += (A == 0) ? 0 [355] : 7 [362]
+355: A <- P[28:4]
+356: pc += (A == 0) ? 0 [357] : 5 [362]
+357: A <- P[32:4]
+358: pc += (A == 0) ? 0 [359] : 3 [362]
+359: A <- P[36:4]
+360: pc += (A == 0) ? 0 [361] : 1 [362]
+361: ret 2147418112
+362: pc += 38 [401]
+363: pc += (A == 285) ? 3 [367] : 0 [364]
+364: pc += (A > 285) ? 0 [365] : 1 [366]
+365: pc += 15 [381]
+366: pc += 6 [373]
+367: A <- P[24:4]
+368: pc += (A == 0) ? 0 [369] : 3 [372]
+369: A <- P[28:4]
+370: pc += (A == 0) ? 0 [371] : 1 [372]
+371: ret 2147418112
+372: pc += 28 [401]
+373: pc += (A == 281) ? 1 [375] : 0 [374]
+374: pc += 26 [401]
+375: A <- P[48:4]
+376: pc += (A == 0) ? 0 [377] : 3 [380]
+377: A <- P[52:4]
+378: pc += (A == 0) ? 0 [379] : 1 [380]
+379: ret 2147418112
+380: pc += 20 [401]
+381: pc += (A == 290) ? 1 [383] : 0 [382]
+382: pc += 18 [401]
+383: A <- P[16:4]
+384: pc += (A == 0) ? 0 [385] : 7 [392]
+385: A <- P[20:4]
+386: pc += (A == 0) ? 0 [387] : 5 [392]
+387: A <- P[24:4]
+388: pc += (A == 0) ? 0 [389] : 3 [392]
+389: A <- P[28:4]
+390: pc += (A == 0) ? 0 [391] : 1 [392]
+391: ret 2147418112
+392: pc += 8 [401]
+393: pc += (A == 319) ? 3 [397] : 0 [394]
+394: pc += (A > 319) ? 0 [395] : 1 [396]
+395: pc += 5 [401]
+396: pc += 1 [398]
+397: ret 2147418112
+398: pc += (A == 318) ? 1 [400] : 0 [399]
+399: pc += 1 [401]
+400: ret 2147418112
+401: ret 2147483648
+
+I1006 13:43:02.013811       1 seccomp.go:88] Seccomp filters installed.
+I1006 13:43:02.013847       1 gofer.go:270] Serving "/" mapped to "/root" on FD 7 (ro: true)
+I1006 13:43:02.013865       1 gofer.go:291] Serving "/etc/resolv.conf" mapped on FD 8 (ro: true)

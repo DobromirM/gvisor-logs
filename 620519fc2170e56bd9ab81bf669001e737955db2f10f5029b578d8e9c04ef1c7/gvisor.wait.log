@@ -1,0 +1,27 @@
+I1006 13:43:06.812835    5987 main.go:216] ***************************
+I1006 13:43:06.812889    5987 main.go:217] Args: [runsc --root=/run/containerd/runsc/k8s.io --log=/run/containerd/io.containerd.runtime.v2.task/k8s.io/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/log.json --log-format=json --debug=true --debug-log=/var/log/runsc/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/gvisor.%COMMAND%.log wait 620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7]
+I1006 13:43:06.812921    5987 main.go:218] Version release-20220919.0
+I1006 13:43:06.812944    5987 main.go:219] GOOS: linux
+I1006 13:43:06.812966    5987 main.go:220] GOARCH: amd64
+I1006 13:43:06.812990    5987 main.go:221] PID: 5987
+I1006 13:43:06.813014    5987 main.go:222] UID: 0, GID: 0
+I1006 13:43:06.813038    5987 main.go:223] Configuration:
+I1006 13:43:06.813061    5987 main.go:224] 		RootDir: /run/containerd/runsc/k8s.io
+I1006 13:43:06.813085    5987 main.go:225] 		Platform: ptrace
+I1006 13:43:06.813110    5987 main.go:226] 		FileAccess: exclusive, overlay: false
+I1006 13:43:06.813135    5987 main.go:227] 		Network: sandbox, logging: false
+I1006 13:43:06.813163    5987 main.go:228] 		Strace: false, max size: 1024, syscalls: 
+I1006 13:43:06.813186    5987 main.go:229] 		LISAFS: true
+I1006 13:43:06.813208    5987 main.go:230] 		Debug: true
+I1006 13:43:06.813231    5987 main.go:231] 		Systemd: false
+I1006 13:43:06.813253    5987 main.go:232] ***************************
+D1006 13:43:06.813299    5987 state_file.go:57] Load container, rootDir: "/run/containerd/runsc/k8s.io", id: {SandboxID: ContainerID:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7}, opts: {Exact:false SkipCheck:false RootContainer:false}
+D1006 13:43:06.814682    5987 container.go:582] Signal container, cid: 620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7, signal: signal 0 (0)
+D1006 13:43:06.814713    5987 sandbox.go:1017] Signal sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.814728    5987 sandbox.go:519] Connecting to sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.814944    5987 urpc.go:568] urpc: successfully marshalled 144 bytes.
+D1006 13:43:06.820429    5987 urpc.go:611] urpc: unmarshal success.
+D1006 13:43:06.820471    5987 container.go:548] Wait on container, cid: 620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7
+D1006 13:43:06.820481    5987 sandbox.go:917] Waiting for container "620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7" in sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.820493    5987 sandbox.go:519] Connecting to sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.820530    5987 urpc.go:568] urpc: successfully marshalled 107 bytes.

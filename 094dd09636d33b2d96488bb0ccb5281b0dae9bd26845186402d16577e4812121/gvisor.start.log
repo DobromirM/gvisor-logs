@@ -1,0 +1,35 @@
+I1006 13:43:02.140054    5825 main.go:216] ***************************
+I1006 13:43:02.140104    5825 main.go:217] Args: [runsc --root=/run/containerd/runsc/k8s.io --log=/run/containerd/io.containerd.runtime.v2.task/k8s.io/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/log.json --log-format=json --debug=true --debug-log=/var/log/runsc/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/gvisor.%COMMAND%.log start 094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121]
+I1006 13:43:02.140127    5825 main.go:218] Version release-20220919.0
+I1006 13:43:02.140139    5825 main.go:219] GOOS: linux
+I1006 13:43:02.140152    5825 main.go:220] GOARCH: amd64
+I1006 13:43:02.140168    5825 main.go:221] PID: 5825
+I1006 13:43:02.140181    5825 main.go:222] UID: 0, GID: 0
+I1006 13:43:02.140194    5825 main.go:223] Configuration:
+I1006 13:43:02.140206    5825 main.go:224] 		RootDir: /run/containerd/runsc/k8s.io
+I1006 13:43:02.140219    5825 main.go:225] 		Platform: ptrace
+I1006 13:43:02.140231    5825 main.go:226] 		FileAccess: exclusive, overlay: false
+I1006 13:43:02.140247    5825 main.go:227] 		Network: sandbox, logging: false
+I1006 13:43:02.140261    5825 main.go:228] 		Strace: false, max size: 1024, syscalls: 
+I1006 13:43:02.140274    5825 main.go:229] 		LISAFS: true
+I1006 13:43:02.140286    5825 main.go:230] 		Debug: true
+I1006 13:43:02.140298    5825 main.go:231] 		Systemd: false
+I1006 13:43:02.140310    5825 main.go:232] ***************************
+D1006 13:43:02.140336    5825 state_file.go:57] Load container, rootDir: "/run/containerd/runsc/k8s.io", id: {SandboxID: ContainerID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121}, opts: {Exact:false SkipCheck:false RootContainer:false}
+D1006 13:43:02.144852    5825 container.go:368] Start container, cid: 094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121
+D1006 13:43:02.144892    5825 sandbox.go:276] Start root sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121", PID: 5795
+D1006 13:43:02.144899    5825 sandbox.go:519] Connecting to sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+I1006 13:43:02.144933    5825 network.go:58] Setting up network
+I1006 13:43:02.145005    5825 namespace.go:123] Applying namespace network at path "/proc/5795/ns/net"
+D1006 13:43:02.145459    5825 network.go:192] Copying a static ARP entry: 169.254.1.1 ee:19:1f:00:1a:f0
+D1006 13:43:02.145690    5825 network.go:241] Setting up network channels
+D1006 13:43:02.145700    5825 network.go:244] Creating Channel 0
+D1006 13:43:02.168644    5825 network.go:307] Setting up network, config: {FilePayload:{Files:[0xc00000e088]} LoopbackLinks:[{Name:lo Addresses:[127.0.0.1/8 ::1/128] Routes:[{Destination:{IP:127.0.0.0 Mask:ff000000} Gateway:<nil>} {Destination:{IP:::1 Mask:ffffffffffffffffffffffffffffffff} Gateway:<nil>}]}] FDBasedLinks:[{Name:eth0 InterfaceIndex:3 MTU:9001 Addresses:[172.31.18.78/32 fe80::e41c:68ff:fe55:e05a/64] Routes:[{Destination:{IP:169.254.1.1 Mask:ffffffff} Gateway:<nil>} {Destination:{IP:fe80:: Mask:ffffffffffffffff0000000000000000} Gateway:<nil>}] GSOMaxSize:65536 GvisorGSOEnabled:false TXChecksumOffload:false RXChecksumOffload:true LinkAddress:e6:1c:68:55:e0:5a QDisc:fifo Neighbors:[{IP:169.254.1.1 HardwareAddr:ee:19:1f:00:1a:f0}] NumChannels:1}] Defaultv4Gateway:{Route:{Destination:{IP:0.0.0.0 Mask:00000000000000000000ffff00000000} Gateway:169.254.1.1} Name:eth0} Defaultv6Gateway:{Route:{Destination:{IP:<nil> Mask:<nil>} Gateway:<nil>} Name:} AFXDP:false PCAP:false}
+D1006 13:43:02.168946    5825 urpc.go:568] urpc: successfully marshalled 1110 bytes.
+D1006 13:43:02.171290    5825 urpc.go:611] urpc: unmarshal success.
+I1006 13:43:02.171346    5825 namespace.go:144] Restoring namespace network
+D1006 13:43:02.171419    5825 urpc.go:568] urpc: successfully marshalled 112 bytes.
+D1006 13:43:02.180122    5825 urpc.go:611] urpc: unmarshal success.
+D1006 13:43:02.180249    5825 container.go:770] Save container, cid: 094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121
+D1006 13:43:02.180988    5825 state_file.go:57] Load container, rootDir: "/run/containerd/runsc/k8s.io", id: {SandboxID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 ContainerID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121}, opts: {Exact:true SkipCheck:true RootContainer:false}
+I1006 13:43:02.181763    5825 main.go:248] Exiting with status: 0

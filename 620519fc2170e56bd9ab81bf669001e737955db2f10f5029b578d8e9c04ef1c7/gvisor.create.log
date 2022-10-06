@@ -1,0 +1,253 @@
+I1006 13:43:06.546852    5933 main.go:216] ***************************
+I1006 13:43:06.546895    5933 main.go:217] Args: [runsc --root=/run/containerd/runsc/k8s.io --log=/run/containerd/io.containerd.runtime.v2.task/k8s.io/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/log.json --log-format=json --debug=true --debug-log=/var/log/runsc/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/gvisor.%COMMAND%.log create --bundle /run/containerd/io.containerd.runtime.v2.task/k8s.io/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7 --pid-file /run/containerd/io.containerd.runtime.v2.task/k8s.io/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/init.pid 620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7]
+I1006 13:43:06.546923    5933 main.go:218] Version release-20220919.0
+I1006 13:43:06.546935    5933 main.go:219] GOOS: linux
+I1006 13:43:06.546947    5933 main.go:220] GOARCH: amd64
+I1006 13:43:06.546960    5933 main.go:221] PID: 5933
+I1006 13:43:06.546974    5933 main.go:222] UID: 0, GID: 0
+I1006 13:43:06.546986    5933 main.go:223] Configuration:
+I1006 13:43:06.547003    5933 main.go:224] 		RootDir: /run/containerd/runsc/k8s.io
+I1006 13:43:06.547016    5933 main.go:225] 		Platform: ptrace
+I1006 13:43:06.547029    5933 main.go:226] 		FileAccess: exclusive, overlay: false
+I1006 13:43:06.547052    5933 main.go:227] 		Network: sandbox, logging: false
+I1006 13:43:06.547072    5933 main.go:228] 		Strace: false, max size: 1024, syscalls: 
+I1006 13:43:06.547085    5933 main.go:229] 		LISAFS: true
+I1006 13:43:06.547097    5933 main.go:230] 		Debug: true
+I1006 13:43:06.547109    5933 main.go:231] 		Systemd: false
+I1006 13:43:06.547122    5933 main.go:232] ***************************
+W1006 13:43:06.547992    5933 specutils.go:113] noNewPrivileges ignored. PR_SET_NO_NEW_PRIVS is assumed to always be set.
+D1006 13:43:06.548155    5933 specutils.go:75] Spec:
+{
+  "ociVersion": "1.0.2-dev",
+  "process": {
+    "user": {
+      "uid": 0,
+      "gid": 0
+    },
+    "args": [
+      "/docker-entrypoint.sh",
+      "nginx",
+      "-g",
+      "daemon off;"
+    ],
+    "env": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "HOSTNAME=nginx-7d577bf9c6-n4m8d",
+      "NGINX_VERSION=1.23.1",
+      "NJS_VERSION=0.7.6",
+      "PKG_RELEASE=1~bullseye",
+      "KUBERNETES_PORT_443_TCP_PROTO=tcp",
+      "KUBERNETES_PORT_443_TCP_PORT=443",
+      "KUBERNETES_PORT_443_TCP_ADDR=10.100.0.1",
+      "KUBERNETES_SERVICE_HOST=10.100.0.1",
+      "KUBERNETES_SERVICE_PORT=443",
+      "KUBERNETES_SERVICE_PORT_HTTPS=443",
+      "KUBERNETES_PORT=tcp://10.100.0.1:443",
+      "KUBERNETES_PORT_443_TCP=tcp://10.100.0.1:443"
+    ],
+    "cwd": "/",
+    "oomScoreAdj": -997
+  },
+  "root": {
+    "path": "/run/containerd/io.containerd.runtime.v2.task/k8s.io/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/rootfs"
+  },
+  "mounts": [
+    {
+      "destination": "/proc",
+      "type": "proc",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/k8s.io/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/proc",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev"
+      ]
+    },
+    {
+      "destination": "/dev",
+      "type": "tmpfs",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/k8s.io/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/tmpfs",
+      "options": [
+        "nosuid",
+        "strictatime",
+        "mode=755",
+        "size=65536k"
+      ]
+    },
+    {
+      "destination": "/dev/pts",
+      "type": "devpts",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/k8s.io/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/devpts",
+      "options": [
+        "nosuid",
+        "noexec",
+        "newinstance",
+        "ptmxmode=0666",
+        "mode=0620",
+        "gid=5"
+      ]
+    },
+    {
+      "destination": "/dev/mqueue",
+      "type": "mqueue",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/k8s.io/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/mqueue",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev"
+      ]
+    },
+    {
+      "destination": "/sys",
+      "type": "sysfs",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/k8s.io/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/sysfs",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev",
+        "ro"
+      ]
+    },
+    {
+      "destination": "/sys/fs/cgroup",
+      "type": "cgroup",
+      "source": "/run/containerd/io.containerd.runtime.v2.task/k8s.io/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/cgroup",
+      "options": [
+        "nosuid",
+        "noexec",
+        "nodev",
+        "relatime",
+        "ro"
+      ]
+    },
+    {
+      "destination": "/etc/hosts",
+      "type": "bind",
+      "source": "/var/lib/kubelet/pods/3d6523c3-ac3f-4f51-bd36-ca6b432568d7/etc-hosts",
+      "options": [
+        "rbind",
+        "rprivate",
+        "rw"
+      ]
+    },
+    {
+      "destination": "/dev/termination-log",
+      "type": "bind",
+      "source": "/var/lib/kubelet/pods/3d6523c3-ac3f-4f51-bd36-ca6b432568d7/containers/nginx/022859f8",
+      "options": [
+        "rbind",
+        "rprivate",
+        "rw"
+      ]
+    },
+    {
+      "destination": "/etc/hostname",
+      "type": "bind",
+      "source": "/var/lib/containerd/io.containerd.grpc.v1.cri/sandboxes/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/hostname",
+      "options": [
+        "rbind",
+        "rprivate",
+        "rw"
+      ]
+    },
+    {
+      "destination": "/etc/resolv.conf",
+      "type": "bind",
+      "source": "/var/lib/containerd/io.containerd.grpc.v1.cri/sandboxes/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/resolv.conf",
+      "options": [
+        "rbind",
+        "rprivate",
+        "rw"
+      ]
+    },
+    {
+      "destination": "/dev/shm",
+      "type": "tmpfs",
+      "source": "/run/containerd/io.containerd.grpc.v1.cri/sandboxes/094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/shm",
+      "options": [
+        "rprivate",
+        "rw"
+      ]
+    },
+    {
+      "destination": "/var/run/secrets/kubernetes.io/serviceaccount",
+      "type": "bind",
+      "source": "/var/lib/kubelet/pods/3d6523c3-ac3f-4f51-bd36-ca6b432568d7/volumes/kubernetes.io~projected/kube-api-access-px6sh",
+      "options": [
+        "rbind",
+        "rprivate",
+        "ro"
+      ]
+    }
+  ],
+  "annotations": {
+    "io.kubernetes.cri.container-name": "nginx",
+    "io.kubernetes.cri.container-type": "container",
+    "io.kubernetes.cri.image-name": "docker.io/library/nginx:latest",
+    "io.kubernetes.cri.sandbox-id": "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121",
+    "io.kubernetes.cri.sandbox-name": "nginx-7d577bf9c6-n4m8d",
+    "io.kubernetes.cri.sandbox-namespace": "dmarinov"
+  },
+  "linux": {
+    "resources": {
+      "memory": {
+        "limit": 1048576
+      },
+      "cpu": {
+        "shares": 2,
+        "quota": 1000,
+        "period": 100000
+      }
+    },
+    "cgroupsPath": "kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7",
+    "namespaces": [
+      {
+        "type": "pid"
+      },
+      {
+        "type": "ipc",
+        "path": "/proc/5795/ns/ipc"
+      },
+      {
+        "type": "uts",
+        "path": "/proc/5795/ns/uts"
+      },
+      {
+        "type": "mount"
+      },
+      {
+        "type": "network",
+        "path": "/proc/5795/ns/net"
+      }
+    ]
+  }
+}
+D1006 13:43:06.548179    5933 container.go:180] Create container, cid: 620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7, rootDir: "/run/containerd/runsc/k8s.io"
+D1006 13:43:06.548239    5933 container.go:289] Creating new container, cid: 620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7, sandbox: 094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121
+D1006 13:43:06.548249    5933 state_file.go:57] Load container, rootDir: "/run/containerd/runsc/k8s.io", id: {SandboxID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 ContainerID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121}, opts: {Exact:true SkipCheck:false RootContainer:false}
+D1006 13:43:06.548766    5933 container.go:582] Signal container, cid: 094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121, signal: signal 0 (0)
+D1006 13:43:06.548784    5933 sandbox.go:1017] Signal sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.548790    5933 sandbox.go:519] Connecting to sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.548844    5933 urpc.go:568] urpc: successfully marshalled 144 bytes.
+D1006 13:43:06.549046    5933 urpc.go:611] urpc: unmarshal success.
+D1006 13:43:06.549315    5933 cgroup.go:410] New cgroup for pid: self, *cgroup.cgroupV1: &{Name:kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7 Parents:map[blkio:/system.slice/containerd.service cpu:/system.slice/containerd.service cpuacct:/system.slice/containerd.service cpuset:/ devices:/system.slice/containerd.service freezer:/ hugetlb:/ memory:/system.slice/containerd.service net_cls:/ net_prio:/ perf_event:/ pids:/system.slice/containerd.service systemd:/system.slice/containerd.service] Own:map[]}
+D1006 13:43:06.549356    5933 cgroup.go:483] Installing cgroup path "kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7"
+D1006 13:43:06.549504    5933 cgroup.go:539] Creating cgroup "net_prio": "/sys/fs/cgroup/net_prio/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7"
+D1006 13:43:06.549547    5933 cgroup.go:539] Creating cgroup "freezer": "/sys/fs/cgroup/freezer/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7"
+D1006 13:43:06.549583    5933 cgroup.go:539] Creating cgroup "hugetlb": "/sys/fs/cgroup/hugetlb/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7"
+D1006 13:43:06.549643    5933 cgroup.go:539] Creating cgroup "memory": "/sys/fs/cgroup/memory/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7"
+D1006 13:43:06.550325    5933 cgroup.go:539] Creating cgroup "pids": "/sys/fs/cgroup/pids/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7"
+D1006 13:43:06.550515    5933 cgroup.go:539] Creating cgroup "perf_event": "/sys/fs/cgroup/perf_event/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7"
+I1006 13:43:06.550655    5933 cgroup.go:511] Skipping cgroup "rdma", err: stat /sys/fs/cgroup/rdma: no such file or directory
+D1006 13:43:06.550682    5933 cgroup.go:539] Creating cgroup "systemd": "/sys/fs/cgroup/systemd/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7"
+D1006 13:43:06.550737    5933 cgroup.go:539] Creating cgroup "blkio": "/sys/fs/cgroup/blkio/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7"
+D1006 13:43:06.551938    5933 cgroup.go:539] Creating cgroup "cpu": "/sys/fs/cgroup/cpu/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7"
+D1006 13:43:06.553507    5933 cgroup.go:539] Creating cgroup "cpuset": "/sys/fs/cgroup/cpuset/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7"
+D1006 13:43:06.573212    5933 cgroup.go:539] Creating cgroup "net_cls": "/sys/fs/cgroup/net_cls/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7"
+D1006 13:43:06.573252    5933 cgroup.go:539] Creating cgroup "cpuacct": "/sys/fs/cgroup/cpuacct/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7"
+D1006 13:43:06.573274    5933 cgroup.go:539] Creating cgroup "devices": "/sys/fs/cgroup/devices/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7"
+D1006 13:43:06.573324    5933 sandbox.go:247] Create sub-container "620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7" in sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121", PID: 5795
+D1006 13:43:06.573338    5933 sandbox.go:519] Connecting to sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.573433    5933 urpc.go:568] urpc: successfully marshalled 129 bytes.
+D1006 13:43:06.573754    5933 urpc.go:611] urpc: unmarshal success.
+D1006 13:43:06.573785    5933 container.go:770] Save container, cid: 620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7
+I1006 13:43:06.573990    5933 main.go:248] Exiting with status: 0

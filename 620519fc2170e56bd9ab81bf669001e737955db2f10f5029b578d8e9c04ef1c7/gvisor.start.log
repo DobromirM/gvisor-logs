@@ -1,0 +1,97 @@
+I1006 13:43:06.638056    5941 main.go:216] ***************************
+I1006 13:43:06.638098    5941 main.go:217] Args: [runsc --root=/run/containerd/runsc/k8s.io --log=/run/containerd/io.containerd.runtime.v2.task/k8s.io/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/log.json --log-format=json --debug-log=/var/log/runsc/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/gvisor.%COMMAND%.log --debug=true start 620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7]
+I1006 13:43:06.638120    5941 main.go:218] Version release-20220919.0
+I1006 13:43:06.638136    5941 main.go:219] GOOS: linux
+I1006 13:43:06.638148    5941 main.go:220] GOARCH: amd64
+I1006 13:43:06.638160    5941 main.go:221] PID: 5941
+I1006 13:43:06.638174    5941 main.go:222] UID: 0, GID: 0
+I1006 13:43:06.638186    5941 main.go:223] Configuration:
+I1006 13:43:06.638198    5941 main.go:224] 		RootDir: /run/containerd/runsc/k8s.io
+I1006 13:43:06.638227    5941 main.go:225] 		Platform: ptrace
+I1006 13:43:06.638240    5941 main.go:226] 		FileAccess: exclusive, overlay: false
+I1006 13:43:06.638254    5941 main.go:227] 		Network: sandbox, logging: false
+I1006 13:43:06.638268    5941 main.go:228] 		Strace: false, max size: 1024, syscalls: 
+I1006 13:43:06.638280    5941 main.go:229] 		LISAFS: true
+I1006 13:43:06.638292    5941 main.go:230] 		Debug: true
+I1006 13:43:06.638305    5941 main.go:231] 		Systemd: false
+I1006 13:43:06.638317    5941 main.go:232] ***************************
+D1006 13:43:06.638344    5941 state_file.go:57] Load container, rootDir: "/run/containerd/runsc/k8s.io", id: {SandboxID: ContainerID:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7}, opts: {Exact:false SkipCheck:false RootContainer:false}
+W1006 13:43:06.639555    5941 specutils.go:113] noNewPrivileges ignored. PR_SET_NO_NEW_PRIVS is assumed to always be set.
+D1006 13:43:06.639583    5941 container.go:368] Start container, cid: 620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7
+D1006 13:43:06.639814    5941 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/cpu/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.639832    5941 cgroup.go:116] Setting "/sys/fs/cgroup/cpu/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/cgroup.procs" to "0"
+D1006 13:43:06.639895    5941 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/hugetlb/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.639903    5941 cgroup.go:116] Setting "/sys/fs/cgroup/hugetlb/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/cgroup.procs" to "0"
+D1006 13:43:06.639927    5941 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/freezer/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.639934    5941 cgroup.go:116] Setting "/sys/fs/cgroup/freezer/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/cgroup.procs" to "0"
+D1006 13:43:06.639958    5941 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/cpuacct/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.639969    5941 cgroup.go:116] Setting "/sys/fs/cgroup/cpuacct/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/cgroup.procs" to "0"
+D1006 13:43:06.639990    5941 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/perf_event/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.640004    5941 cgroup.go:116] Setting "/sys/fs/cgroup/perf_event/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/cgroup.procs" to "0"
+D1006 13:43:06.640057    5941 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/net_cls/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.640065    5941 cgroup.go:116] Setting "/sys/fs/cgroup/net_cls/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/cgroup.procs" to "0"
+D1006 13:43:06.640095    5941 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/net_prio/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.640102    5941 cgroup.go:116] Setting "/sys/fs/cgroup/net_prio/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/cgroup.procs" to "0"
+D1006 13:43:06.640119    5941 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/devices/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.640126    5941 cgroup.go:116] Setting "/sys/fs/cgroup/devices/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/cgroup.procs" to "0"
+D1006 13:43:06.640148    5941 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/rdma/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.640154    5941 cgroup.go:116] Setting "/sys/fs/cgroup/rdma/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/cgroup.procs" to "0"
+D1006 13:43:06.640167    5941 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/systemd/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.640174    5941 cgroup.go:116] Setting "/sys/fs/cgroup/systemd/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/cgroup.procs" to "0"
+D1006 13:43:06.640197    5941 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/blkio/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.640207    5941 cgroup.go:116] Setting "/sys/fs/cgroup/blkio/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/cgroup.procs" to "0"
+D1006 13:43:06.640232    5941 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/cpuset/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.640238    5941 cgroup.go:116] Setting "/sys/fs/cgroup/cpuset/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/cgroup.procs" to "0"
+D1006 13:43:06.656484    5941 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/memory/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.656550    5941 cgroup.go:116] Setting "/sys/fs/cgroup/memory/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/cgroup.procs" to "0"
+D1006 13:43:06.656631    5941 cgroup.go:616] Joining cgroup "/sys/fs/cgroup/pids/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.656649    5941 cgroup.go:116] Setting "/sys/fs/cgroup/pids/system.slice/containerd.service/kubepods-pod3d6523c3_ac3f_4f51_bd36_ca6b432568d7.slice:cri-containerd:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121/cgroup.procs" to "0"
+D1006 13:43:06.656944    5941 donation.go:31] Donating FD 3: "/run/containerd/io.containerd.runtime.v2.task/k8s.io/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/log.json"
+D1006 13:43:06.656955    5941 donation.go:31] Donating FD 4: "/var/log/runsc/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/gvisor.gofer.log"
+D1006 13:43:06.656960    5941 donation.go:31] Donating FD 5: "/run/containerd/io.containerd.runtime.v2.task/k8s.io/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/config.json"
+D1006 13:43:06.656968    5941 donation.go:31] Donating FD 6: "|1"
+D1006 13:43:06.656975    5941 donation.go:31] Donating FD 7: "gofer IO FD"
+D1006 13:43:06.656980    5941 donation.go:31] Donating FD 8: "gofer IO FD"
+D1006 13:43:06.656983    5941 donation.go:31] Donating FD 9: "gofer IO FD"
+D1006 13:43:06.656987    5941 donation.go:31] Donating FD 10: "gofer IO FD"
+D1006 13:43:06.657003    5941 donation.go:31] Donating FD 11: "gofer IO FD"
+D1006 13:43:06.657007    5941 donation.go:31] Donating FD 12: "gofer IO FD"
+D1006 13:43:06.657013    5941 container.go:997] Starting gofer: /proc/self/exe [runsc-gofer --root=/run/containerd/runsc/k8s.io --debug=true --log=/run/containerd/io.containerd.runtime.v2.task/k8s.io/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/log.json --log-format=json --debug-log=/var/log/runsc/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7/gvisor.%COMMAND%.log --log-fd=3 --debug-log-fd=4 gofer --bundle /run/containerd/io.containerd.runtime.v2.task/k8s.io/620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7 --spec-fd=5 --mounts-fd=6 --io-fds=7 --io-fds=8 --io-fds=9 --io-fds=10 --io-fds=11 --io-fds=12]
+I1006 13:43:06.658972    5941 container.go:1038] Gofer started, PID: 5949
+D1006 13:43:06.715752    5941 sandbox.go:299] Start sub-container "620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7" in sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121", PID: 5795
+D1006 13:43:06.715780    5941 sandbox.go:1370] Changing "/dev/stdin" ownership to 65534/65534
+D1006 13:43:06.715792    5941 sandbox.go:1370] Changing "/dev/stdout" ownership to 65534/65534
+D1006 13:43:06.715799    5941 sandbox.go:1370] Changing "/dev/stderr" ownership to 65534/65534
+D1006 13:43:06.715804    5941 sandbox.go:519] Connecting to sandbox "094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121"
+D1006 13:43:06.718305    5941 urpc.go:568] urpc: successfully marshalled 6718 bytes.
+D1006 13:43:06.763892    5941 urpc.go:611] urpc: unmarshal success.
+D1006 13:43:06.763948    5941 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/memory/system.slice/containerd.service"
+D1006 13:43:06.763967    5941 cgroup.go:116] Setting "/sys/fs/cgroup/memory/system.slice/containerd.service/cgroup.procs" to "0"
+D1006 13:43:06.764038    5941 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/perf_event"
+D1006 13:43:06.764049    5941 cgroup.go:116] Setting "/sys/fs/cgroup/perf_event/cgroup.procs" to "0"
+D1006 13:43:06.764094    5941 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/net_prio"
+D1006 13:43:06.764103    5941 cgroup.go:116] Setting "/sys/fs/cgroup/net_prio/cgroup.procs" to "0"
+D1006 13:43:06.764145    5941 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/hugetlb"
+D1006 13:43:06.764151    5941 cgroup.go:116] Setting "/sys/fs/cgroup/hugetlb/cgroup.procs" to "0"
+D1006 13:43:06.764179    5941 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/freezer"
+D1006 13:43:06.764186    5941 cgroup.go:116] Setting "/sys/fs/cgroup/freezer/cgroup.procs" to "0"
+D1006 13:43:06.764220    5941 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/devices/system.slice/containerd.service"
+D1006 13:43:06.764226    5941 cgroup.go:116] Setting "/sys/fs/cgroup/devices/system.slice/containerd.service/cgroup.procs" to "0"
+D1006 13:43:06.764258    5941 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/pids/system.slice/containerd.service"
+D1006 13:43:06.764265    5941 cgroup.go:116] Setting "/sys/fs/cgroup/pids/system.slice/containerd.service/cgroup.procs" to "0"
+D1006 13:43:06.764296    5941 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/blkio/system.slice/containerd.service"
+D1006 13:43:06.764303    5941 cgroup.go:116] Setting "/sys/fs/cgroup/blkio/system.slice/containerd.service/cgroup.procs" to "0"
+D1006 13:43:06.764336    5941 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/cpu/system.slice/containerd.service"
+D1006 13:43:06.764343    5941 cgroup.go:116] Setting "/sys/fs/cgroup/cpu/system.slice/containerd.service/cgroup.procs" to "0"
+D1006 13:43:06.764423    5941 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/cpuacct/system.slice/containerd.service"
+D1006 13:43:06.764436    5941 cgroup.go:116] Setting "/sys/fs/cgroup/cpuacct/system.slice/containerd.service/cgroup.procs" to "0"
+D1006 13:43:06.764462    5941 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/systemd/system.slice/containerd.service"
+D1006 13:43:06.764470    5941 cgroup.go:116] Setting "/sys/fs/cgroup/systemd/system.slice/containerd.service/cgroup.procs" to "0"
+D1006 13:43:06.764501    5941 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/cpuset"
+D1006 13:43:06.764509    5941 cgroup.go:116] Setting "/sys/fs/cgroup/cpuset/cgroup.procs" to "0"
+D1006 13:43:06.780503    5941 cgroup.go:602] Restoring cgroup "/sys/fs/cgroup/net_cls"
+D1006 13:43:06.780540    5941 cgroup.go:116] Setting "/sys/fs/cgroup/net_cls/cgroup.procs" to "0"
+D1006 13:43:06.780596    5941 container.go:770] Save container, cid: 620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7
+D1006 13:43:06.781170    5941 state_file.go:57] Load container, rootDir: "/run/containerd/runsc/k8s.io", id: {SandboxID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 ContainerID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121}, opts: {Exact:true SkipCheck:true RootContainer:false}
+D1006 13:43:06.781772    5941 state_file.go:57] Load container, rootDir: "/run/containerd/runsc/k8s.io", id: {SandboxID:094dd09636d33b2d96488bb0ccb5281b0dae9bd26845186402d16577e4812121 ContainerID:620519fc2170e56bd9ab81bf669001e737955db2f10f5029b578d8e9c04ef1c7}, opts: {Exact:true SkipCheck:true RootContainer:false}
+I1006 13:43:06.782205    5941 main.go:248] Exiting with status: 0
